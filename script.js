@@ -16,7 +16,7 @@ const FOOD_ITEMS = [
   {
     id: "burger2", name: "Paneer Burger", price: 169,
     category: "Burgers", emoji: "🍔",
-    image: "https://searchingforspice.com/wp-content/uploads/2024/11/halloumi-burger-with-hot-honey-9.jpg",
+    image: "https://images.unsplash.com/photo-1553979459-d2229ba7433a?auto=format&fit=crop&w=600&q=80",
     description: "Delicious burger with a paneer filling."
   },
   {
