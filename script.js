@@ -1,5 +1,4 @@
 
-"use strict";
 
 /* =========================================
    ROYAL NAVSARI DINING - SELF ORDERING
@@ -16,67 +15,67 @@ const FOOD_ITEMS = [
   {
     id: "burger2", name: "Paneer Burger", price: 169,
     category: "Burgers", emoji: "🍔",
-    image: "https://images.unsplash.com/photo-1553979459-d2229ba7433a?auto=format&fit=crop&w=600&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1rj4d39HX9q1jh1ezVVItAhosX7jC1f7uFOcmgCLS0Q&s=10",
     description: "Delicious burger with a paneer filling."
   },
   {
     id: "burger3", name: "Spicy Veg Burger", price: 179,
     category: "Burgers", emoji: "🍔",
-    image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=600&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxnjDP3oSKOzv4v5vrkg1irXpfXtxscFqhSh8MjjBOhoLfaU9LFXWx7XVA&s=10",
     description: "Spicy patty with a flavourful sauce."
   },
   {
     id: "burger4", name: "Double Cheese Burger", price: 229,
     category: "Burgers", emoji: "🍔",
-    image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=600&q=80",
+    image: "https://www.kitchensanctuary.com/wp-content/uploads/2021/05/Double-Cheeseburger-tall-FS-38.webp",
     description: "A cheesy burger packed with flavour."
   },
   {
     id: "pizza1", name: "Margherita Pizza", price: 199,
     category: "Pizza", emoji: "🍕",
-    image: "https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=600&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKMlvNvCk8QfJIthn0Ow_2S49Zq-2y-fpPHo62ZOdHyD1qFbYTa-ZxJ9Y&s=10",
     description: "Cheese, tomato sauce and herbs."
   },
   {
     id: "pizza2", name: "Farmhouse Pizza", price: 249,
     category: "Pizza", emoji: "🍕",
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEctee1VTju8MvxwAObaOgqv_WFXBpHD3Vm_01RmAWSDoFM4ZiEHaBEi8&s=10",
     description: "Pizza with a colourful vegetable topping."
   },
   {
     id: "pizza3", name: "Paneer Pizza", price: 269,
     category: "Pizza", emoji: "🍕",
-    image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=600&q=80",
+    image: "https://static.toiimg.com/photo/54699659.cms",
     description: "Paneer, cheese and delicious spices."
   },
   {
     id: "pizza4", name: "Cheese Pizza", price: 239,
     category: "Pizza", emoji: "🍕",
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80",
+    image: "https://www.tasteofhome.com/wp-content/uploads/2024/03/Cheese-Pizzas_EXPS_FT23_275162_ST_1128_8.jpg",
     description: "A rich and cheesy pizza."
   },
   {
     id: "indian1", name: "Paneer Tikka", price: 209,
     category: "Indian", emoji: "🍢",
-    image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
+    image: "https://www.cookwithmanali.com/wp-content/uploads/2015/07/Restaurant-Style-Recipe-Paneer-Tikka.jpg",
     description: "Grilled paneer with Indian spices."
   },
   {
     id: "indian2", name: "Butter Paneer", price: 250,
     category: "Indian", emoji: "🍛",
-    image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80",
+    image: "https://www.cookwithmanali.com/wp-content/uploads/2019/05/Paneer-Butter-Masala.jpg",
     description: "Paneer in a creamy tomato gravy."
   },
   {
     id: "indian3", name: "Veg Biryani", price: 280,
     category: "Indian", emoji: "🍚",
-    image: "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=600&q=80",
+    image: "https://i0.wp.com/chitrasfoodbook.com/wp-content/uploads/2015/05/hyderabad-veg-dum-biryani.jpg?resize=600%2C503&ssl=1",
     description: "Aromatic rice with vegetables and spices."
   },
   {
     id: "indian4", name: "Dal Makhani", price: 150,
     category: "Indian", emoji: "🥣",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
+    image: "https://sinfullyspicy.com/wp-content/uploads/2015/03/1200-by-1200-images-1.jpg",
     description: "Slow-cooked lentils with a creamy texture."
   },
   {
@@ -100,13 +99,13 @@ const FOOD_ITEMS = [
   {
     id: "snack4", name: "Manchurian", price: 100,
     category: "Snacks", emoji: "🥢",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFInNXZ_3iJUaaDU8--v7sQvEZ1EQbw2DTBaYCcvSuBA&s=10",
     description: "A spicy Indo-Chinese favourite."
   },
   {
     id: "dessert1", name: "Gulab Jamun", price: 100,
     category: "Dessert", emoji: "🍮",
-    image: "https://images.unsplash.com/photo-1666190092159-efc2e3b2b6d5?auto=format&fit=crop&w=600&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaA0N57DvHc0MrXB-hVHixSII-UDJq2ycia2BCMjOF1w&s=10",
     description: "Traditional Indian sweet."
   },
   {
