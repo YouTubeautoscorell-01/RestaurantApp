@@ -4,149 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#edf5ff">
-  <title>Royal Navsari Dining | Self Ordering</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Restaurant - Order Food</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header class="topbar">
-    <div class="brand-mark">R</div>
-    <div class="brand">
-      <h1>ROYAL DINING</h1>
-      <p>GOOD FOOD • GREAT MOOD</p>
-    </div>
-    <button class="icon-button" id="searchFocus" aria-label="Search">⌕</button>
-    <button class="icon-button cart-shortcut" id="cartShortcut" aria-label="Open cart">
-      🛒 <span id="cartBadge">0</span>
-    </button>
+    <div class="logo">🍽️ Restaurant</div>
+    <button id="cartOpen" class="cart-btn">🛒 Cart <span id="cartCount">0</span></button>
   </header>
 
   <main>
-    <section class="welcome">
-      <div>
-        <span class="eyebrow">WELCOME TO</span>
-        <h2>Discover your<br><span>favourite food.</span></h2>
-        <p>Freshly prepared, just for you.</p>
-      </div>
-      <div class="welcome-art" aria-hidden="true">🍔</div>
-    </section>
-
-    <section class="search-area">
-      <label class="search-box">
-        <span>⌕</span>
-        <input id="searchInput" type="search" placeholder="Search for your favorite food..." autocomplete="off">
-        <button id="clearSearch" type="button" aria-label="Clear search">×</button>
-      </label>
-    </section>
-
-    <section class="category-section">
-      <div class="section-heading">
-        <h2>Categories</h2>
-      </div>
-      <div class="categories" id="categories">
-        <button class="category active" data-category="All">
-          <span class="category-icon">🍽️</span><span>All</span>
-        </button>
-        <button class="category" data-category="Burgers">
-          <span class="category-icon">🍔</span><span>Burgers</span>
-        </button>
-        <button class="category" data-category="Pizza">
-          <span class="category-icon">🍕</span><span>Pizza</span>
-        </button>
-        <button class="category" data-category="Indian">
-          <span class="category-icon">🍛</span><span>Indian</span>
-        </button>
-        <button class="category" data-category="Snacks">
-          <span class="category-icon">🥪</span><span>Snacks</span>
-        </button>
-        <button class="category" data-category="Dessert">
-          <span class="category-icon">🍰</span><span>Dessert</span>
-        </button>
-        <button class="category" data-category="Drinks">
-          <span class="category-icon">🥤</span><span>Drinks</span>
-        </button>
+    <section id="loginPage" class="login-page">
+      <div class="login-card">
+        <div class="food-icon">🍕</div>
+        <h1>Welcome!</h1>
+        <p>Enter your mobile number to order food.</p>
+        <label for="mobile">Mobile Number</label>
+        <div class="phone-input">
+          <span>+91</span>
+          <input id="mobile" type="tel" inputmode="numeric"
+            maxlength="10" placeholder="10-digit mobile number">
+        </div>
+        <p id="loginError" class="error"></p>
+        <button id="continueBtn" class="primary-btn">Continue →</button>
+        <small>No SMS OTP required</small>
       </div>
     </section>
 
-    <section class="menu-section" id="menuSection">
-      <div class="section-heading menu-heading">
+    <section id="menuPage" class="hidden">
+      <div class="welcome">
         <div>
-          <span class="eyebrow">MADE WITH LOVE</span>
-          <h2 id="menuTitle">Popular Food</h2>
+          <h1>Our Menu</h1>
+          <p>Fresh food, made with care.</p>
         </div>
-        <span class="item-count" id="itemCount">20 items</span>
+        <button id="changeNumber" class="outline-btn">Change Number</button>
       </div>
-
-      <div class="food-grid" id="foodGrid"></div>
-      <div class="empty-state" id="emptyState" hidden>
-        <span>🔎</span>
-        <h3>No food found</h3>
-        <p>Try another search or category.</p>
-      </div>
+      <div class="customer-info">📱 Customer: <b id="customerNumber"></b></div>
+      <div id="menuGrid" class="menu-grid"></div>
     </section>
 
-    <section class="cart-section" id="cartSection">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">YOUR SELECTION</span>
-          <h2>Your Cart <span id="cartTitleCount">(0)</span></h2>
-        </div>
-        <button class="text-button" id="continueShopping">Continue shopping</button>
+    <section id="cartPage" class="hidden">
+      <button id="backToMenu" class="outline-btn">← Back to Menu</button>
+      <h1>Your Cart</h1>
+      <div id="cartItems"></div>
+      <div class="cart-summary">
+        <h2>Total: <span id="cartTotal">₹0</span></h2>
+        <button id="placeOrder" class="primary-btn">Place Order</button>
+        <p id="orderMessage"></p>
       </div>
-
-      <div class="cart-content" id="cartItems">
-        <div class="cart-empty">
-          <span>🛒</span>
-          <h3>Your cart is empty</h3>
-          <p>Add your favourite food to get started.</p>
-        </div>
-      </div>
-
-      <div class="bill">
-        <div><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
-        <div><span>Taxes and charges</span><strong>As applicable</strong></div>
-        <div class="bill-total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
-      </div>
-
-      <button class="primary-button checkout-button" id="checkoutBtn">
-        Place Order <span id="checkoutTotal">₹0</span>
-      </button>
-      <p class="checkout-note">Your order will be sent to the restaurant when Firebase is configured correctly.</p>
     </section>
   </main>
 
-  <footer class="app-footer">
-    <div class="brand-mark">R</div>
-    <p>ROYAL NAVSARI DINING</p>
-    <span>Good food. Great mood.</span>
-  </footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <div class="modal-backdrop" id="orderModal" hidden>
-    <section class="order-modal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
-      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
-      <div class="modal-icon">🛍️</div>
-      <h2 id="orderModalTitle">Confirm your order</h2>
-      <p>Review your cart total before placing your order.</p>
-      <div class="confirm-total">
-        <span>Order total</span>
-        <strong id="confirmTotal">₹0</strong>
-      </div>
-      <label class="table-label" for="tableNumber">Table number (optional)</label>
-      <input id="tableNumber" type="text" maxlength="30" placeholder="Enter table number">
-      <button class="primary-button" id="confirmOrderBtn">Confirm Order</button>
-      <p class="modal-note">No payment will be taken by this demo screen.</p>
-    </section>
-  </div>
-
-  <!-- Keep your existing firebase.js file -->
-  <script type="module" src="firebase.js"></script>
-  <script src="script.js"></script>
+  <div id="toast" class="toast"></div>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
